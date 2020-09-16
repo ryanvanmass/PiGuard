@@ -26,7 +26,7 @@ read ClientIP
 #Configure File
 sudo su -c "echo \"[Interface]\" >> /etc/wireguard/wg0-client.conf"
 sudo su -c "echo \"Address = 10.100.100.$ClientIP/32 \" >> /etc/wireguard/wg0-client.conf"
-sudo su -c "echo \"DNS = 10.100.100.1 \" >> /etc/wireguard/wg0-client.conf"
+sudo su -c "echo \"DNS = 10.100.100.1/24 \" >> /etc/wireguard/wg0-client.conf"
 sudo su -c "echo \"PrivateKey = $PrivateKey\" >> /etc/wireguard/wg0-client.conf"
 sudo su -c "echo \" \" >>/etc/wireguard/wg0-client.conf"
 sudo su -c "echo \"[Peer]\" >> /etc/wireguard/wg0-client.conf"
