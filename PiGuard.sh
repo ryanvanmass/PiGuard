@@ -6,12 +6,17 @@ echo "2. Add Clients"
 read UserChoice
 
 ############### Sub-menu Selection basted on User Input ###############
+#Variables
+Install=0
+ClientAdd=0
+
+#Logic
 if [ $UserChoice = 1 ]
 then
-    Install=1
+    $Install=1
 elif [ $UserChoice = 2 ]
 then
-    ClientAdd=1
+    $ClientAdd=1
 else
     echo "Error Invalid Input"
 fi
