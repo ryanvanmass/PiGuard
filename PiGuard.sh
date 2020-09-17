@@ -13,10 +13,10 @@ ClientAdd=0
 #Logic
 if [ $UserChoice = 1 ]
 then
-    $Install=1
+    Install=1
 elif [ $UserChoice = 2 ]
 then
-    $ClientAdd=1
+    ClientAdd=1
 else
     echo "Error Invalid Input"
 fi
@@ -45,7 +45,7 @@ then
 fi
 
 ############### Client add Options ###############
-if [ $Install = 1 ]
+if [ $ClientAdd = 1 ]
 then
     echo "Select one of the following:"
     echo "1. PC Clients"
