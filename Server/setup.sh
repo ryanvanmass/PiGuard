@@ -40,7 +40,7 @@ systemctl enable wg-quick@wg0.service
 #Variables for Printing the required Information
 PublicKey=$(cat /etc/wireguard/server_public_key)
 
-ServerIP="10.100.100.1/24"
+ServerIP=$(ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 
 #Creates File
 echo "INFORMATION FOR CONNECTING CLIENTS" >> ServerInformation.txt
