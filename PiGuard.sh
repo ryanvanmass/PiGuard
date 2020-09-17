@@ -1,10 +1,11 @@
 #!/bin/bash
 ############### Device Selection ###############
 echo "Select one of the following:"
-echo "1. Server Configuratior"
-echo "2. Client Configurator"
-echo "3. Add Device (PC)"
-echo "4. Add Device (Mobile)"
+echo "1. Server Configurator"
+echo "2. PiHole Configurator"
+echo "3. Client Configurator"
+echo "4. Add Device (PC)"
+echo "5. Add Device (Mobile)"
 read Device
 
 ############### Configures baste on User Input ###############
@@ -13,11 +14,14 @@ then
     sh ./Server/setup.sh
 elif [ $Device = 2 ]
 then
-    sh ./Client/setup.sh
+    sh ./Server/PiHole.sh
 elif [ $Device = 3 ]
 then
-    sh ./Server/addpeer.sh
+    sh ./Client/setup.sh
 elif [ $Device = 4 ]
+then
+    sh ./Server/addpeer.sh
+elif [ $Device = 5 ]
 then
     sh ./Server/mobileclient.sh
 else
